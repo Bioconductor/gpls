@@ -23,8 +23,8 @@ glpls1a.train.test.error <- function(train.X, train.y, test.X, test.y,
                       lmax=lmax, family=family, link=link, br=br)
   test.y.predict <- glpls1a.predict(test.X, train.fit$coefficients,
                                        family=family, link=link)
-  error.test <- 1-sum(test.y.predict>0.5==test.y)/length(test.y)
-  error.obs <- seq(1:length(test.y))[test.y.predict>0.5!=test.y]
+  error.test <- 1-sum((test.y.predict>0.5)==test.y)/length(test.y)
+  error.obs <- seq(1:length(test.y))[(test.y.predict>0.5)!=test.y]
   return(list(error=error.test, error.obs = error.obs,
               predict.test=test.y.predict))
 
@@ -46,8 +46,8 @@ lmax=100, family="binomial", link="logit", br=T)
         glpls1a.predict(matrix(train.X[i,], nrow=1), train.fit$coefficients)
       }
 
-    error.CV <- 1-sum(train.y.predict>0.5==train.y)/length(train.y)
-    error.obs <- seq(1:length(train.y))[train.y.predict>0.5!=train.y]
+    error.CV <- 1-sum((train.y.predict>0.5)==train.y)/length(train.y)
+    error.obs <- seq(1:length(train.y))[(train.y.predict>0.5)!=train.y]
     return(list(error=error.CV,error.obs=error.obs))
   }
 
@@ -61,8 +61,8 @@ lmax=100, family="binomial", link="logit", br=T)
     train.fit <- glpls1a(train.X, train.y, K.prov=K.prov, eps=eps,
     lmax=lmax, family=family, link=link, br=br)
     train.y.predict <- glpls1a.predict(train.X, train.fit$coefficients)
-    error <- 1-sum(train.y.predict>0.5==train.y)/length(train.y)
-    error.obs <- seq(1:length(train.y))[train.y.predict>0.5!=train.y]
+    error <- 1-sum((train.y.predict>0.5)==train.y)/length(train.y)
+    error.obs <- seq(1:length(train.y))[(train.y.predict>0.5)!=train.y]
     return(list(error=error,error.obs=error.obs))
   }
 
