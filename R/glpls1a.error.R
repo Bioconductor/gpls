@@ -5,24 +5,24 @@ glpls1a.train.test.error <- function(train.X,train.y,test.X,test.y,K.prov=NULL,e
 
   train.X <- t(train.X)
   test.X <- t(test.X)
-  
+
   if(!is.null(rownames(train.X)) & !is.null(rownames(test.X)))
      {
         test.X <- test.X[match(row.names(train.X),row.names(test.X)),]
      }
 
-  train.mean <- apply(train.X,1,mean)
+  train.mean <- rowMeans(train.X)
   train.sd <- apply(train.X,1,sd)
   train.X <- scale(t(train.X))
 
   test.X <- t((test.X-train.mean)/train.sd)
-  
+
   train.fit <- glpls1a(train.X,train.y,K.prov=K.prov,eps=eps,lmax=lmax,family=family,link=link,br=br)
   test.y.predict <- glpls1a.predict(test.X,train.fit$coefficients,family=family,link=link)
   error.test <- 1-sum(test.y.predict>0.5==test.y)/length(test.y)
   error.obs <- seq(1:length(test.y))[test.y.predict>0.5!=test.y]
   return(list(error=error.test, error.obs = error.obs,predict.test=test.y.predict))
-              
+
 }
 
 glpls1a.cv.error <- function(train.X,train.y,K.prov=NULL,eps=1e-3,lmax=100,family="binomial",link="logit",br=T)
@@ -66,7 +66,7 @@ glpls1a.mlogit.cv.error <- function(train.X,train.y,K.prov=NULL,eps=1e-3,lmax=10
 
     family <- "binomial"
     link <- "logit"
-    
+
     n <- nrow(train.X)
 
     C <- max(train.y)
@@ -77,7 +77,7 @@ glpls1a.mlogit.cv.error <- function(train.X,train.y,K.prov=NULL,eps=1e-3,lmax=10
         dx <- dim(train.X)
         K.prov <- min(dx[1],dx[2]-1)
       }
-  
+
 
     for( i in 1:n)
       {
@@ -90,7 +90,7 @@ glpls1a.mlogit.cv.error <- function(train.X,train.y,K.prov=NULL,eps=1e-3,lmax=10
          {
             train.fit <- glpls1a.logit.all(train.X[-i,],train.y[-i],K.prov=K.prov,eps=eps,lmax=lmax,br=br)
           }
-       
+
        train.y.predict[i,] <- glpls1a.mlogit.predict(matrix(train.X[i,],nrow=1),train.fit$coef)
       }
 
