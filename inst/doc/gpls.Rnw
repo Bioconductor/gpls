@@ -8,7 +8,7 @@
 % \VignettePackage{gpls}
 \documentclass[11pt]{article}
 
-\usepackage{amsmath,epsfig,psfig,pstricks,fullpage}
+\usepackage{amsmath,epsfig,psfig,fullpage}
 \usepackage{graphicx}
 \usepackage[authoryear,round]{natbib}
 \usepackage{hyperref}
