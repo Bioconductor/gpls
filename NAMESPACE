@@ -1,0 +1,1 @@
+export(glpls1a,glpls1a.cv.error,glpls1a.train.test.error,glpls1a.mlogit,glpls1a.logit.all, glpls1a.mlogit.cv.error)

@@ -1,0 +1,8 @@
+glpls1a		        to fit IRWPLS or IRWPLSF
+glpls1a.mlogit          to fit MIRWPLS or MIRWPLSF
+glpls1a.logit.all	to fit MIRWPLS or MIRWPLSF by separately fitting all logit models
+glpls1a.predict		to predict probability for IRWPLS or IRWPLSF
+glpls1a.mlogit.predict  to predict probability for MIRWPLS or MIRWPLSF
+glpls1a.train.test.error	out-of-sample test error for IRWPLS or IRWPLSF 
+glpls1a.cv.error		training CV error for IRWPLS or IRWPLSF
+glpls1a.mlogit.cv.error		training CV error for MIRWPLS or MIRWPLSF
