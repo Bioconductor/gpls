@@ -15,7 +15,7 @@
 
 %\parindent 0in
 
-\bibliographystyle{plainnat}
+%\bibliographystyle{plainnat}
 
 \begin{document}
 \title{Classification using Generalized Partial Least Squares}
@@ -102,5 +102,5 @@ glpls1a.mlogit.cv.error(x,y,mlogit=FALSE,br=TRUE)
 
 @ 
 
-\bibliography{gpls}
+%\bibliography{gpls}
 \end{document}
