@@ -5,13 +5,14 @@
   A simple prediction method for \code{gpls} objects.
 }
 \usage{
-predict.gpls(object, newdata)
+predict.gpls(object, newdata, ...)
 }
 
 \arguments{
   \item{object}{A \code{gpls} object, typically obtained from a call to
   \code{\link{gpls}}  }
   \item{newdata}{New data, for which predictions are desired. }
+  \item{\dots}{Other arguments to be passed on}
 }
 \details{
   The prediction method is straight forward. The estimated coefficients
