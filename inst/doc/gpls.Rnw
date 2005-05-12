@@ -8,7 +8,7 @@
 % \VignettePackage{gpls}
 \documentclass[11pt]{article}
 
-\usepackage{amsmath,epsfig,psfig,fullpage}
+\usepackage{amsmath,epsfig,fullpage}
 \usepackage{graphicx}
 \usepackage[authoryear,round]{natbib}
 \usepackage{hyperref}
@@ -22,7 +22,7 @@
 
 %\parindent 0in
 
-%\bibliographystyle{plainnat}
+\bibliographystyle{plainnat}
 
 \begin{document}
 \title{Classification using Generalized Partial Least Squares}
@@ -171,5 +171,5 @@ library(MASS)
      predict(z, Iris[-train, ])$class
 
 @
-%\bibliography{gpls}
+\bibliography{gpls}
 \end{document}
