@@ -5,6 +5,6 @@ Author: Beiying Ding
 Description: Classification using generalized partial least squares
         for two-group and multi-group (more than 2 group)
         classification.
-Maintainer: Robert Gentleman <rgentlem@fhcrc.org>
+Maintainer: Biocore Team <biocpkgs@lists.fhcrc.org>
 License: LGPL
 
