@@ -291,8 +291,7 @@ predict.gpls = function (object, newdata, ...)
             newdata <- model.frame(Terms, newdata, na.action = na.pass,
                 xlev = object$xlevels)
             if (!is.null(cl <- attr(Terms, "dataClasses")) &&
-                exists(".checkMFClasses", envir = NULL))
-                .checkMFClasses(cl, newdata)
+                stats::.checkMFClasses(cl, newdata)
         }
         x <- model.matrix(Terms, newdata, contrasts = object$contrasts)
         xint <- match("(Intercept)", colnames(x), nomatch = 0)
