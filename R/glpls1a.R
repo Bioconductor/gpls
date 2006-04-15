@@ -290,7 +290,7 @@ predict.gpls = function (object, newdata, ...)
         else {
             newdata <- model.frame(Terms, newdata, na.action = na.pass,
                 xlev = object$xlevels)
-            if (!is.null(cl <- attr(Terms, "dataClasses")) &&
+            if (!is.null(cl <- attr(Terms, "dataClasses"))) 
                 stats::.checkMFClasses(cl, newdata)
         }
         x <- model.matrix(Terms, newdata, contrasts = object$contrasts)
