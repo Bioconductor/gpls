@@ -5,7 +5,7 @@ Author: Beiying Ding
 Description: Classification using generalized partial least squares
         for two-group and multi-group (more than 2 group)
         classification.
-Maintainer: Biocore Team <biocpkgs@lists.fhcrc.org>
+Maintainer: Biocore Team c/o BioC user list <bioconductor@stat.math.ethz.ch>
 License:  The Artistic License, Version 2.0
 biocViews: Statistics, Classification, Microarray
 
