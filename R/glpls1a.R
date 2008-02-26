@@ -272,12 +272,6 @@ print.gpls = function(x, digits = max(3, getOption("digits") - 3), ...)
     invisible(x)
 }
 
-gpls.exprSet = function(x, y, K.prov=NULL, eps=1e-3, lmax=100, b.ini=NULL,
-denom.eps=1e-20, family="binomial", link=NULL, br=TRUE, ...)
-{
-    stop("not yet implemented")
-}
-
 ##Based on predict.lda
 predict.gpls = function (object, newdata, ...)
 {

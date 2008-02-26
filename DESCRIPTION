@@ -1,11 +1,11 @@
 Package: gpls
 Title: Classification using generalized partial least squares
-Version: 1.11.0
+Version: 1.11.1
 Author: Beiying Ding
 Description: Classification using generalized partial least squares
         for two-group and multi-group (more than 2 group)
         classification.
 Maintainer: Biocore Team c/o BioC user list <bioconductor@stat.math.ethz.ch>
+Imports: stats
 License:  Artistic-2.0
 biocViews: Statistics, Classification, Microarray
-

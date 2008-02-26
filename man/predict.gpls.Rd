@@ -1,13 +1,13 @@
 \name{predict.gpls}
 \alias{predict.gpls}
-\title{ A prediction method for gpls. }
+\alias{predict,gpls-method}
+\title{A prediction method for gpls.}
 \description{
   A simple prediction method for \code{gpls} objects.
 }
 \usage{
-predict.gpls(object, newdata, ...)
+\method{predict}{gpls}(object, newdata, ...)
 }
-
 \arguments{
   \item{object}{A \code{gpls} object, typically obtained from a call to
   \code{\link{gpls}}  }
@@ -27,17 +27,14 @@ predict.gpls(object, newdata, ...)
   the test data set).
 }
 \value{
-  A list of length two:
+  A \code{list} of length two:
   \item{class}{The predicted classes; one for each row of \code{newdata}.}
   \item{predicted}{The estimated predictors.}
 }
-\author{B. Ding and R. Gentleman }
-
-
-\seealso{ \code{\link{gpls}} }
+\author{B. Ding and R. Gentleman}
+\seealso{\code{\link{gpls}}}
 \examples{
   example(gpls)
   p1 = predict(m1)
 }
-\keyword{classif }
-
+\keyword{classif}
