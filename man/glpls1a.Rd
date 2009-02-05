@@ -34,8 +34,13 @@ glpls1a(X, y, K.prov = NULL, eps = 0.001, lmax = 100, b.ini = NULL,
 }
 
 \references{
- \item Ding, B.Y. and Gentleman, R. (2003) Classification using generalized partial least squares.
- \item Marx, B.D (1996) Iteratively reweighted partial least squares estimation for generalized linear regression. Technometrics 38(4): 374-381.
+  \itemize{
+     \item Ding, B.Y. and Gentleman, R. (2003) \emph{Classification using
+      generalized partial least squares}. 
+     \item Marx, B.D (1996) Iteratively reweighted partial least squares
+     estimation for generalized linear regression. \emph{Technometrics} 38(4):
+     374-381.  
+  }
 }
 \author{Beiying Ding, Robert Gentleman}
 \note{}

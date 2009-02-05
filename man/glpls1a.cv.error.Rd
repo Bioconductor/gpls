@@ -30,8 +30,13 @@ glpls1a.cv.error(train.X,train.y, K.prov=NULL,eps=1e-3,lmax=100,family="binomial
 }
 
 \references{
- \item Ding, B.Y. and Gentleman, R. (2003) Classification using generalized partial least squares.
- \item Marx, B.D (1996) Iteratively reweighted partial least squares estimation for generalized linear regression. Technometrics 38(4): 374-381.
+ \itemize{
+   \item Ding, B.Y. and Gentleman, R. (2003) \emph{Classification using
+   generalized partial least squares}. 
+   \item Marx, B.D (1996) Iteratively reweighted partial least squares
+   estimation for generalized linear regression. \emph{Technometrics} 38(4):
+   374-381. 
+  }
 }
 \author{Beiying Ding, Robert Gentleman}
 \note{}

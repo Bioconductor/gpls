@@ -63,16 +63,21 @@ link=NULL, br=TRUE, \dots)
     was used.} 
   \item{family}{The \code{family} argument that was passed in.}
   \item{link}{The \code{link} argument that was passed in.}
-  \item {terms}{The constructed terms object.}
+  \item{terms}{The constructed terms object.}
   \item{call}{The call}
   \item{levs}{The factor levels for prediction.}
 }
-\references{  \item{Ding, B.Y. and Gentleman, R. (2003)}{Classification
-using generalized partial least squares.}
- \item{Marx, B.D (1996)}{Iteratively reweighted partial least squares
- estimation for generalized linear regression. Technometrics 38(4):
- 374-381.}
+\references{ 
+  \itemize{
+ \item Ding, B.Y. and Gentleman, R. (2003) \emph{Classification
+using generalized partial least squares}.
+ \item Marx, B.D (1996) Iteratively reweighted partial least squares
+ estimation for generalized linear regression. \emph{Technometrics} 38(4):
+ 374-381.
+  }
 }
+
+
 \author{B. Ding and R. Gentleman }
 
 \seealso{ \code{\link{glpls1a}} }
