@@ -154,8 +154,17 @@ glpls1a <- function(X, y, K.prov=NULL, eps=1e-3, lmax=100, b.ini=NULL,
       }
 
       ## update beta
-      beta.old <- beta
-      beta <- W%*%solve(t(P)%*%W)%*%Q
+      temp <- ginv(t(P)%*%W)
+      if(any(is.na(temp)))
+        {
+          #cat("t(P)%*%W singular!\n")
+          break
+        }
+      else
+        {
+          beta.old <- beta
+          beta <- W%*%temp%*%Q
+        }
 
       ## Hat matrix
       H <- hat(sweep(cbind(rep(1,dx[1]),X),1,sqrt(diag(V)),"*"),intercept=FALSE)

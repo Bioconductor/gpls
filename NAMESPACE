@@ -1,4 +1,6 @@
-importFrom(stats, predict)
+importFrom(stats, coef, delete.response, dnorm, hat, is.empty.model,
+           model.frame, model.matrix, model.response, na.pass, pnorm,
+           qnorm, rnorm, sd, weighted.mean)
 
 export(gpls, glpls1a,glpls1a.cv.error, glpls1a.train.test.error,
         glpls1a.mlogit, glpls1a.logit.all, glpls1a.mlogit.cv.error)
