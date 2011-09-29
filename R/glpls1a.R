@@ -233,7 +233,8 @@ glpls1a <- function(X, y, K.prov=NULL, eps=1e-3, lmax=100, b.ini=NULL,
                 family = family,
                 link = link,
                 levs = levs,
-                bias.reduction = br)
+                bias.reduction = br,
+                loading.matrix = P)
   class(ans) = "gpls"
   ans
 }

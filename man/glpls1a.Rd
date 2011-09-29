@@ -31,6 +31,7 @@ glpls1a(X, y, K.prov = NULL, eps = 0.001, lmax = 100, b.ini = NULL,
   \item{convergence }{whether convergence is achieved}
   \item{niter}{total number of iterations}
   \item{bias.reduction}{whether Firth's procedure is used}
+  \item{loading.matrix}{the matrix of loadings}
 }
 
 \references{
