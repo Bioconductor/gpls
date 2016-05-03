@@ -1,6 +1,6 @@
 Package: gpls
 Title: Classification using generalized partial least squares
-Version: 1.44.0
+Version: 1.45.0
 Author: Beiying Ding
 Description: Classification using generalized partial least squares for
         two-group and multi-group (more than 2 group) classification.
